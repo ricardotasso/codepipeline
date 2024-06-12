@@ -24,9 +24,14 @@ jobs:
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
       - name: AWS CodePipeline Trigger via GitHub Actions
-        uses: rexsateesh/aws-codepipeline-action@v1.0
+        uses: zulhfreelancer/aws-codepipeline-action@v1.0.7
         with:
+        # AWS Region where the CodePipeline is located
           aws-region: "us-east-2"
+        # AWS Access Key ID to trigger CodePipeline
           aws-access-key: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        # AWS Secret Key to trigger CodePipeline
           aws-secret-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          pipeline-name: "rollbackpipe"
+        # The name of the pipeline
+          pipeline-name: rollbackpipe
+          
