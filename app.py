@@ -13,7 +13,7 @@ def main(page: ft.Page):
         page.update()
 
     image = ft.Image(width=800, height=600)
-    button = ft.ElevatedButton("Get Random Dog Image", on_click=show_random_dog_image)
+    button = ft.ElevatedButton("Get Random Dog", on_click=show_random_dog_image)
 
     page.add(
         ft.Column(
